@@ -1,62 +1,68 @@
 {
-  "cat_brands": [
+  "cat brands": [
     {
-      "name": "Meow Mix",
+      "name": "Purrina",
+      "breeds": "Siamese, Bengal, Showshoe, Munchkin",
       "types": [
         {
-          "type": "all_natural",
+          "type": "Kitten",
           "volumes": [
             {
+              "name": "20oz",
+              "price": 19.99
+            },
+            {
               "name": "32oz",
-              "price": 8.99
+              "price": 26.99
             },
             {
               "name": "64oz",
-              "price": 16.99
+              "price": 34.99
             }
           ]
         },
         {
-          "type": "standard",
+          "type": "Elite",
           "volumes": [
             {
-              "name": "58oz",
-              "price": 11.99
+              "name": "20oz",
+              "price": 24.99
             },
             {
-              "name": "72oz",
-              "price": 20.99
+              "name": "40oz",
+              "price": 47.99
             }
           ]
         }
       ]
     },
     {
-      "name": "Purina Cat Chow",
+      "name": "Meow Meal",
+      "breeds": "Manx, Egyptian Mau, Himalayan, Rag Doll",
       "types": [
         {
-          "type": "kitten",
+          "type": "Kitten",
           "volumes": [
             {
-              "name": "16oz",
-              "price": 7.99
+              "name": "24oz",
+              "price": 19.99
             },
             {
-              "name": "24oz",
-              "price": 13.99
+              "name": "48oz",
+              "price": 34.99
             }
           ]
         },
         {
-          "type": "standard",
+          "type": "Adult",
           "volumes": [
             {
-              "name": "58oz",
-              "price": 18.99
+              "name": "28oz",
+              "price": 22.99
             },
             {
-              "name": "72oz",
-              "price": 23.99
+              "name": "56oz",
+              "price": 40.99
             }
           ]
         }
