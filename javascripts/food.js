@@ -2,6 +2,20 @@
 var dogRequest = new XMLHttpRequest();
 var catRequest = new XMLHttpRequest();
 
+// Function for cleaning up strings
+function cleanUp (string) {
+	// First step, remove
+	string = string.replace(/_/g, " ");
+	if (string.indexOf(" ") !== -1) {
+		string = string.split(" ").map(function(element){
+			return element.charAt(0).toUpperCase() + element.slice(1);
+		}).join(" ");
+	} else {
+		string = string.charAt(0).toUpperCase() + string.slice(1);
+	}
+	return string;
+};
+
 // Testing with dog data only first
 function executeThisCodeAfterFileIsLoaded () {
 	// console.log("File loaded");
@@ -91,7 +105,6 @@ function executeThisCodeAfterFileIsLoaded () {
 					// console.log("currentVolumes Price: ", currentVolumes.price);
 				}
 			productData += `</div>`; //Closing productBlock
-			// console.log("productData: ", productData);
 			}
 		productData += `</div>`; //Closing brandBlock
 		}
