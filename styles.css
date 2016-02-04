@@ -1,0 +1,21 @@
+.dog {
+	width: 90%;
+
+}
+
+.brandBlock {
+	border: 1px solid red;
+	text-align: center;
+}
+
+
+.productBlock {
+	border: 1px solid grey;
+	display: inline-block;
+	width: 48%;
+	box-sizing: border-box;
+}
+
+.volumeBlock {
+	border: 1px solid blue;
+}
