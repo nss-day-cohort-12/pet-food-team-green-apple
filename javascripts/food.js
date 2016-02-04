@@ -2,10 +2,24 @@
 var dogRequest = new XMLHttpRequest();
 var catRequest = new XMLHttpRequest();
 
+// Function for cleaning up strings
+function cleanUp (string) {
+	// First step, remove underscores with spaces
+	string = string.replace(/_/g, " ");
+	// if a space exists in the string, split > capitalize the first letter of each word > join back into one string
+	if (string.indexOf(" ") !== -1) {
+		string = string.split(" ").map(function(element){
+			return element.charAt(0).toUpperCase() + element.slice(1);
+		}).join(" ");
+	} else {
+		// If there's only one word, Capitalize the first letter
+		string = string.charAt(0).toUpperCase() + string.slice(1);
+	}
+	return string;
+};
+
 // Testing with dog data only first
 function executeThisCodeAfterFileIsLoaded () {
-	// console.log("File loaded");
-	// console.log(Date.now());
 
 	// Parse the response text as JSON
 	var data = JSON.parse(this.responseText);
@@ -35,7 +49,7 @@ function executeThisCodeAfterFileIsLoaded () {
 			for (var j = 0; j < currentProduct.types.length; j++) {
 				var currentTypes = currentProduct.types[j];
 				productData += `<div class="productBlock">`;
-				productData += `Product Type: ${currentTypes.type}`;
+				productData += `Product Type: ${cleanUp(currentTypes.type)}`;
 				// console.log("currentTypes.type: ", currentTypes.type);
 				// console.log("volumes: ");
 				// Loop through the "volumes" array in types and display "name" & "price"
@@ -91,7 +105,6 @@ function executeThisCodeAfterFileIsLoaded () {
 					// console.log("currentVolumes Price: ", currentVolumes.price);
 				}
 			productData += `</div>`; //Closing productBlock
-			// console.log("productData: ", productData);
 			}
 		productData += `</div>`; //Closing brandBlock
 		}
