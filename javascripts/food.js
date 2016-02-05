@@ -42,28 +42,21 @@ function executeThisCodeAfterFileIsLoaded () {
 			currentProduct = data.dog_brands[i];
 
 			productData += `<div class="brandBlock">`;
-			productData += `<p>Brand Name: ${currentProduct.name}</p>`;
-			// console.log("name: ", currentProduct.name);
-			// console.log("types: ", currentProduct.types);
+			productData += `<p>${currentProduct.name}</p>`;
 			// Loop through the "types" array in dog_brands
 			for (var j = 0; j < currentProduct.types.length; j++) {
 				var currentTypes = currentProduct.types[j];
 				productData += `<div class="productBlock">`;
-				productData += `Product Type: ${cleanUp(currentTypes.type)}`;
-				// console.log("currentTypes.type: ", currentTypes.type);
-				// console.log("volumes: ");
+				productData += `${cleanUp(currentTypes.type)}`;
 				// Loop through the "volumes" array in types and display "name" & "price"
 				for (var k = 0; k < currentTypes.volumes.length; k++) {
 					var currentVolumes = currentTypes.volumes[k];
 					productData += `<div class="volumeBlock">`;
-					productData += `Name: ${currentVolumes.name}`;
-					productData += `Price: $${currentVolumes.price}`;
+					productData += `Size: ${currentVolumes.name} `;
+					productData += `$${currentVolumes.price}`;
 					productData += `</div>`; // Closing volumeBlock
-					// console.log("currentVolumes Name: ", currentVolumes.name);
-					// console.log("currentVolumes Price: ", currentVolumes.price);
 				}
 			productData += `</div>`; //Closing productBlock
-			// console.log("productData: ", productData);
 			}
 		productData += `</div>`; //Closing brandBlock
 		}
@@ -83,26 +76,20 @@ function executeThisCodeAfterFileIsLoaded () {
 			currentProduct = data.cat_brands[i];
 
 			productData += `<div class="brandBlock">`;
-			productData += `<p>Brand Name: ${currentProduct.name}</p>`;
-			productData += `<p>Breeds: ${currentProduct.breeds}</p>`;
-			// console.log("name: ", currentProduct.name);
-			// console.log("types: ", currentProduct.types);
+			productData += `<p>${currentProduct.name}</p>`;
+			productData += `<p>[${currentProduct.breeds}]</p>`;
 			// Loop through the "types" array in dog_brands
 			for (var j = 0; j < currentProduct.types.length; j++) {
 				var currentTypes = currentProduct.types[j];
 				productData += `<div class="productBlock">`;
-				productData += `Product Type: ${currentTypes.type}`;
-				// console.log("currentTypes.type: ", currentTypes.type);
-				// console.log("volumes: ");
+				productData += `${currentTypes.type}`;
 				// Loop through the "volumes" array in types and display "name" & "price"
 				for (var k = 0; k < currentTypes.volumes.length; k++) {
 					var currentVolumes = currentTypes.volumes[k];
 					productData += `<div class="volumeBlock">`;
-					productData += `Name: ${currentVolumes.name}`;
-					productData += `Price: $${currentVolumes.price}`;
+					productData += `Size: ${currentVolumes.name} `;
+					productData += `$${currentVolumes.price}`;
 					productData += `</div>`; // Closing volumeBlock
-					// console.log("currentVolumes Name: ", currentVolumes.name);
-					// console.log("currentVolumes Price: ", currentVolumes.price);
 				}
 			productData += `</div>`; //Closing productBlock
 			}
