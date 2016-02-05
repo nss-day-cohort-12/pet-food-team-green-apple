@@ -1,21 +1,49 @@
-.dog {
-	width: 90%;
+body {
+  font-family: 'Raleway', sans-serif;
+  padding: 25px 25px;
+  border-image-source: url(http://images.clipartpanda.com/cat-paw-clipart-KijeoGeiq.gif);
+  border-image-width: 10;
+  border-image-outset: 0s;
+  border-image-repeat: stretch;
+}
 
+.dog {
+  width: 100%;
 }
 
 .brandBlock {
-	border: 1px solid red;
-	text-align: center;
+  text-align: center;
+  border: 1px solid grey;
+  margin-bottom: 10px;
 }
 
-
 .productBlock {
-	border: 1px solid grey;
-	display: inline-block;
-	width: 48%;
-	box-sizing: border-box;
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+  vertical-align: text-top;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px dashed grey;
 }
 
 .volumeBlock {
-	border: 1px solid blue;
+  padding-top: 5px;
 }
+
+p {
+  font-size: 1.8em;
+  font-family: 'Acme', sans-serif;
+  margin: 9px auto;
+  }
+
+#cat .brandBlock:last-child {
+  margin-bottom: 0px;
+}
+
+
+
+
+
+
+
